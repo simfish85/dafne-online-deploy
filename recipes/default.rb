@@ -15,3 +15,5 @@ user 'rails' do
 end
 
 include_recipe 'dafne_online::nginx'
+
+include_recipe 'dafne_online::mysql'
