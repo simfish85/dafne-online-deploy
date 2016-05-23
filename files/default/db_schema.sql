@@ -114,6 +114,18 @@ CREATE TABLE diary_entry_types (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `diary_entry_types` VALUES (1,'Before Breakfast','BFAST','5.50','7.50'),
+(2,'Before Lunch','LUNCH','4.50','7.50'),(3,'Before Dinner','DINNR','4.50','7.50'),
+(4,'Before Bed','BED','6.50','8.00'),(5,'Other','OTHER','4.50','7.50'),
+(6,'Before Exercise','BEFEX','4.50','7.50'),(7,'After Exercise','AFEX','4.50','7.50'),
+(8,'Hypoglycaemia','HYPO','4.50','7.50'),(9,'Snack','SNACK','4.50','7.50'),
+(10,'Correctional','CORR','4.50','7.50'),(11,'Before Driving','DRIV','5.00','7.50'),
+(13,'Background Insulin','BI','4.50','7.50'),(15,'During Exercise','EXER','4.50','7.50'),
+(17,'During Night','NIGHT','6.50','8.00'),(18,'After Breakfast','AFBF','5.50','7.50'),
+(20,'After Lunch','AFLUN','4.50','7.50'),(22,'After Dinner','AFDIN','4.50','7.50'),
+(24,'Before Supper','SUPP','4.50','7.50'),(26,'After Supper','ASUPP','4.50','7.50'),
+(28,'Illness','ILL','4.50','7.50'),(30,'Fasting','FAST','4.50','7.50'),
+(31,'Hypo Check','HYCHK','4.50','7.50'),(32,'Waking','WAKIN','5.50','7.50');
 
 --
 -- Table structure for table diary_shares
@@ -549,3 +561,8 @@ CREATE TABLE usertypes (
   long_desc varchar(255) DEFAULT NULL,
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `usertypes` VALUES (1,1,'admin','Site Administrator'),
+(2,2,'dafne_mgmt','DAFNE Management'),(3,4,'hcp','DAFNE HCP'),
+(4,5,'graduate','DAFNE Graduate'),(5,6,'user',''),(6,7,'guest',''),
+(7,4,'dafne_admin','DAFNE Centre Admin'),(8,3,'DUAG','DUAG Committee Member');
