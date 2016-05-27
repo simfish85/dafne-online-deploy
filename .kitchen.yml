@@ -13,11 +13,13 @@ platforms:
     driver:
       network:
         - ["private_network", {ip: "192.168.33.34"}]
+      customize:
+        memory: 1024
 
 suites:
   - name: default
     data_bags_path: '../../data_bags'
-    encrypted_data_bag_secret_key_path: '/tmp/my_data_bag_key'
+    encrypted_data_bag_secret_key_path: '/tmp/my_secret_key'
     run_list:
       - recipe[dafne_online::default]
     attributes:

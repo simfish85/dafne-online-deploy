@@ -1,5 +1,5 @@
-upstream unicorn {
-  server unix:<%= node['dafne_online']['deploy_base'] %>/shared/sockets/unicorn.sock fail_timeout=0;
+upstream <%= node['dafne_online']['app_name'] %> {
+  server unix:<%= node['dafne_online']['deploy_base'] %>/shared/tmp/sockets/unicorn.sock fail_timeout=0;
 }
 
 server {

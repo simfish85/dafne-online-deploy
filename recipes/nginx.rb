@@ -5,10 +5,19 @@
 # Copyright (c) 2016 The Authors, All Rights Reserved.
 include_recipe 'nginx::default'
 
+directory node['dafne_online']['deploy_base'] do
+  owner 'rails'
+  group 'admin'
+end
+
+directory "#{node['dafne_online']['deploy_base']}/shared" do
+  owner 'rails'
+  group 'admin'
+end
+
 directory "#{node['dafne_online']['deploy_base']}/shared/config" do
   owner 'rails'
   group 'admin'
-  recursive true
 end
 
 link "/etc/nginx/sites-enabled/#{node['dafne_online']['app_name']}" do

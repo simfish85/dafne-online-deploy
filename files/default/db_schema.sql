@@ -292,6 +292,9 @@ CREATE TABLE news_items (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `news_items` VALUES (1,'My First News Story','Awesome', 1, '20120101','20120101');
+
+
 
 --
 -- Table structure for table pm_messages
