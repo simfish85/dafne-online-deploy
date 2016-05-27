@@ -1,0 +1,8 @@
+production:
+  database: <%= node['dafne_online']['mysql']['database'] %>
+  adapter: mysql
+  host: 127.0.0.1
+  password: <%= @mysql_password %>
+  user: <%= node['dafne_online']['mysql']['user'] %>
+  reconnect: true
+  socket: <%= "/var/run/mysql-#{node['dafne_online']['mysql']['instance_name']}/mysqld.sock" %>
